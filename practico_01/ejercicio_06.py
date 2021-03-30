@@ -7,7 +7,14 @@ def numeros_al_final_basico(lista: List[Union[float, str]]) -> List[Union[float,
     """Toma una lista de enteros y strings y devuelve una lista con todos los
     elementos numéricos al final.
     """
-    pass # Completar
+    aux_str = []
+    aux_int = []
+    for elem in lista:
+        if type(elem) == int:
+            aux_int.append(elem)
+        else:
+            aux_str.append(elem)
+    return aux_str + aux_int
 
 
 # NO MODIFICAR - INICIO
@@ -20,8 +27,15 @@ assert numeros_al_final_basico([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 
 
 def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[float, str]]:
     """Re-escribir utilizando comprensión de listas."""
-    pass # Completar
-
+    """
+    aux_str = [elem for elem in lista if type(elem) == str]
+    aux_int = [elem for elem in lista if type(elem) == int]
+    return aux_str + aux_int
+    """
+                                                                #elem hace referencia a cada elemento
+    return [elem for elem in                                    #La lista ordenada se genera de los elementos:
+            [elem for elem in lista if type(elem) == str] +     #string en lista original /  unidos a
+            [elem for elem in lista if type(elem) == int]]      #'enteros en lista original'
 
 # NO MODIFICAR - INICIO
 assert numeros_al_final_comprension([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]
@@ -35,8 +49,8 @@ def numeros_al_final_sorted(lista: List[Union[float, str]]) -> List[Union[float,
     """Re-escribir utilizando la función sorted con una custom key.
     Referencia: https://docs.python.org/3/library/functions.html#sorted
     """
-    pass # Completar
 
+    return sorted(lista, key=lambda x: type(x) == int)
 
 # NO MODIFICAR - INICIO
 assert numeros_al_final_sorted([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]
@@ -50,7 +64,8 @@ def numeros_al_final_filter(lista: List[Union[float, str]]) -> List[Union[float,
     """CHALLENGE OPCIONAL - Re-escribir utilizando la función filter.
     Referencia: https://docs.python.org/3/library/functions.html#filter
     """
-    pass # Completar
+    return list(filter(lambda x: type(x) == str, lista)) + list(filter(lambda x: type(x) == int, lista))
+
 
 
 # NO MODIFICAR - INICIO
@@ -64,7 +79,6 @@ if __name__ == "__main__":
 
 def numeros_al_final_recursivo(lista: List[Union[float, str]]) -> List[Union[float, str]]:
     """CHALLENGE OPCIONAL - Re-escribir de forma recursiva."""
-    pass # Completar
 
 
 # NO MODIFICAR - INICIO

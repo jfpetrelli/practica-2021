@@ -10,7 +10,15 @@ def suma_cubo_pares_for(numeros: Iterable[int]) -> int:
     Restricción: Utilizar dos bucles for, uno para elevar al cubo y otro para
     separar los pares.
     """
-    pass # Completar
+    cubos = []
+    for num in numeros:
+        cubos.append(pow(num, 3))
+    acumulador = 0
+    for cubo in cubos:
+        if cubo % 2 == 0:
+            acumulador += cubo
+    return acumulador
+
 
 
 # NO MODIFICAR - INICIO
@@ -28,7 +36,7 @@ def suma_cubo_pares_sum_list(numeros: Iterable[int]) -> int:
     Referencia: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
     Referencia: https://docs.python.org/3/library/functions.html#sum
     """
-    pass # Completar
+    return sum([pow(x, 3) for x in numeros if pow(x, 3) % 2 == 0])
 
 
 # NO MODIFICAR - INICIO
@@ -53,7 +61,7 @@ assert suma_cubo_pares_sum_gen([1, 2, 3, 4, 5, 6]) == 288
 
 
 ###############################################################################
-
+"""
 # PARTE 2
 # A continuación se introduce el concepto de Lambdas (Funciones anónimas),
 # Escribir las funciones lambdas que corresponda en cada línea
@@ -90,3 +98,4 @@ assert numeros_al_cubo_pares == [8, 64, 216]
 assert suma_numeros_al_cubo_pares == 288
 assert numeros_ordenada == [1, 3, 5, 2, 4, 6]
 # NO MODIFICAR - FIN
+"""
