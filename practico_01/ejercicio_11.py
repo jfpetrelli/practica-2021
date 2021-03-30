@@ -52,7 +52,7 @@ def suma_cubo_pares_sum_gen(numeros: Iterable[int]) -> int:
     y la función sum.
     Referencia: https://docs.python.org/3/reference/expressions.html#generator-expressions
     """
-    pass # Completar
+    return sum((pow(x, 3) for x in numeros if x % 2 == 0))  #entendi que un numero impar al cubo es impar
 
 
 # NO MODIFICAR - INICIO
@@ -61,7 +61,7 @@ assert suma_cubo_pares_sum_gen([1, 2, 3, 4, 5, 6]) == 288
 
 
 ###############################################################################
-"""
+
 # PARTE 2
 # A continuación se introduce el concepto de Lambdas (Funciones anónimas),
 # Escribir las funciones lambdas que corresponda en cada línea
@@ -72,25 +72,27 @@ numeros = [1, 2, 3, 4, 5, 6]
 
 # Escribir una función lambda que eleve los elementos al cubo
 
-numeros_al_cubo = # Completar
+numeros_al_cubo = lambda lista: [pow(x, 3) for x in lista]
+numeros_al_cubo = numeros_al_cubo(numeros)
 
 
 # Escribir una función lambda que permita filtrar todos los elementos pares
 
-numeros_al_cubo_pares = # Completar
-
+numeros_al_cubo_pares = lambda lista: [pow(x, 3) for x in lista if x % 2 == 0]
+numeros_al_cubo_pares = numeros_al_cubo_pares(numeros)
 
 # Escribir una función Lambda que sume todos los elementos
 
 from functools import reduce
 
-suma_numeros_al_cubo_pares = # Completar
-
+suma_numeros_al_cubo_pares = lambda lista: sum([pow(x, 3) for x in lista if x % 2 == 0])
+suma_numeros_al_cubo_pares = suma_numeros_al_cubo_pares(numeros)
 
 # Escribir una función Lambda que permita ordenar los elementos de la numeros
 # en base a si son pares o impares
 
-numeros_ordenada = # Completar
+numeros_ordenada = numeros_ordenada = list(filter(lambda x: x % 2 == 1, numeros))\
+                   + list(filter(lambda x: x % 2 == 0, numeros))
 
 # NO MODIFICAR - INICIO
 assert numeros_al_cubo == [1, 8, 27, 64, 125, 216]
@@ -98,4 +100,3 @@ assert numeros_al_cubo_pares == [8, 64, 216]
 assert suma_numeros_al_cubo_pares == 288
 assert numeros_ordenada == [1, 3, 5, 2, 4, 6]
 # NO MODIFICAR - FIN
-"""

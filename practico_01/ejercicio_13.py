@@ -21,7 +21,14 @@ def generar_pares_clousure(initial: int = 0) -> Callable[[], int]:
         - Usar closures
         - Usar el modificador nonlocal
     """
-    pass # Completar
+    def siguiente_par():
+        nonlocal initial
+        if initial % 2 == 0:
+            initial += 2
+            return initial - 2      #pide en el primer retorno un 0 y no el siguiente numero para a 0
+        initial += 1
+        return initial - 2          #genera un comportamiento extraño, primera salida numero anterior al dado
+    return siguiente_par
 
 
 # NO MODIFICAR - INICIO
@@ -45,8 +52,10 @@ def generar_pares_generator(initial: int = 0) -> Iterator[int]:
     """Re-Escribir utilizando Generadores
     Referencia: https://docs.python.org/3/howto/functional.html?highlight=generator#generators
     """
-    pass # Completar
 
+    while True:
+        yield initial
+        initial += 2
 
 # NO MODIFICAR - INICIO
 generador_pares = generar_pares_generator()
@@ -61,7 +70,20 @@ assert next(generador_pares) == 4
 
 def generar_pares_generator_send(initial: int = 0) -> Iterator[int]:
     """CHALLENGE OPCIONAL: Re-Escribir utilizando send para saltear numeros"""
-    pass # Completar
+
+"""
+    while True:
+        initial = yield        primera parte
+        initial += 2
+        
+        
+    initial = yield
+    while True:             
+        yield initial           segunda parte
+        initial +=2   
+"""
+
+
 
 
 # NO MODIFICAR - INICIO
