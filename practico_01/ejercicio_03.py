@@ -16,9 +16,9 @@ def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]
     if multiplicar:
         respuesta = a * b
     elif b == 0:
-            respuesta = "Operación no válida"
+        respuesta = "Operación no válida"
     else:
-            respuesta = a / b
+        respuesta = a / b
     return respuesta
 
 
@@ -31,6 +31,8 @@ assert operacion_basica(0, 5, True) == 0
 assert operacion_basica(0, 5, False) == 0
 assert operacion_basica(1, 0, True) == 0
 assert operacion_basica(1, 0, False) == "Operación no válida"
+
+
 # NO MODIFICAR - FIN
 
 
@@ -45,7 +47,6 @@ def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, st
         return "Operación no válida"
     else:
         return a / b
-
 
 
 # NO MODIFICAR - INICIO

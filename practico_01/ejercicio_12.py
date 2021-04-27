@@ -6,7 +6,6 @@ base de datos y se quieren combinar estas listas para que luego puedan crearse
 los objetos de la capa de negocio.
 """
 
-
 from typing import Any, List, Tuple
 
 nombre_articulos = ["ventana", "lámpara", "shampoo"]
@@ -24,6 +23,7 @@ def combinar_basico(nombres: List[str], precios: List[float]) -> Tuple[Any]:
     for i in range(len(nombres)):
         combinacion.append((nombres[i], precios[i]))
     return tuple(combinacion)
+
 
 # NO MODIFICAR - INICIO
 respuesta = (
@@ -53,7 +53,7 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
                 if indicen == indicep and indicen == indicei:
                     combinacion.append((nombre, precio, id))
     return tuple(combinacion)
-    
+
 
 # NO MODIFICAR - INICIO
 respuesta = (

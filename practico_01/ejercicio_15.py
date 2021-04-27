@@ -60,10 +60,13 @@ def medir_tiempo(func: Callable[[], int]) -> Tuple[int, float]:
     elapsed = perf_counter() - start
     return resultado, elapsed
 
+
 # NO MODIFICAR - INICIO
 result, elapsed = medir_tiempo(partial(calcular_posibilidades, lista, limite))
 print(f"Tiempo: {elapsed:2.2f} segundos - Usando Partial")
 assert result == 28671512
+
+
 # NO MODIFICAR - FIN
 
 
@@ -75,11 +78,13 @@ def medir_tiempo(func: Callable[[Sequence[int], int], int]) -> Callable[[Sequenc
     partial. En este caso se debe devolver una función que devuelva la tupla y
     tome una cantidad arbitraria de parámetros.
     """
+
     def temporizador(*arg):
         start = perf_counter()
         result = func(*arg)
         elapsed = perf_counter() - start
         return result, elapsed
+
     return temporizador
 
 
@@ -135,10 +140,12 @@ def memoized(func):
     de ejecución
     """
     cache = {}
+
     def auxiliar(lista, limite):
         if limite not in cache:
             cache[limite] = func(lista, limite)
         return cache[limite]
+
     return auxiliar
 
 
@@ -194,6 +201,7 @@ def calcular_posibilidades_recursiva(lista: Sequence[int], limite: int) -> int:
             count += 1
     return count
     ###
+
 
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":

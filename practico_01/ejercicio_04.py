@@ -20,10 +20,13 @@ def es_vocal_if(letra: str) -> bool:
         return True
     return False
 
+
 # NO MODIFICAR - INICIO
 assert es_vocal_if("a")
 assert not es_vocal_if("b")
 assert es_vocal_if("A")
+
+
 # NO MODIFICAR - FIN
 
 
@@ -39,14 +42,17 @@ def es_vocal_if_in(letra: str) -> bool:
         return True
     return False
     """
-    if letra.lower() in ('a', 'e', 'i', 'o', 'u'): #modificar tupla por string "aeiou"
+    if letra.lower() in ('a', 'e', 'i', 'o', 'u'):  # modificar tupla por string "aeiou"
         return True
     return False
+
 
 # NO MODIFICAR - INICIO
 assert es_vocal_if_in("a")
 assert not es_vocal_if_in("b")
 assert es_vocal_if_in("A")
+
+
 # NO MODIFICAR - FIN
 
 

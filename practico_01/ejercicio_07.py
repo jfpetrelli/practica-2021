@@ -15,10 +15,13 @@ def es_palindromo(palabra: str) -> bool:
             return True
     return False
 
+
 # NO MODIFICAR - INICIO
 assert not es_palindromo("amor")
 assert es_palindromo("radar")
 assert es_palindromo("")
+
+
 # NO MODIFICAR - FIN
 
 

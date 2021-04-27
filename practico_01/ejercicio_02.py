@@ -19,6 +19,8 @@ def maximo_encadenado(a: float, b: float, c: float) -> float:
 assert maximo_encadenado(1, 10, 5) == 10
 assert maximo_encadenado(4, 9, 18) == 18
 assert maximo_encadenado(24, 9, 18) == 24
+
+
 # NO MODIFICAR - FIN
 
 
@@ -37,6 +39,8 @@ assert maximo_cuadruple(1, 10, 5, -5) == 10
 assert maximo_cuadruple(4, 9, 18, 6) == 18
 assert maximo_cuadruple(24, 9, 18, 20) == 24
 assert maximo_cuadruple(24, 9, 18, 30) == 30
+
+
 # NO MODIFICAR - FIN
 
 
@@ -55,6 +59,8 @@ assert maximo_arbitrario(1, 10, 5, -5) == 10
 assert maximo_arbitrario(4, 9, 18, 6) == 18
 assert maximo_arbitrario(24, 9, 18, 20) == 24
 assert maximo_arbitrario(24, 9, 18, 30) == 30
+
+
 # NO MODIFICAR - FIN
 
 

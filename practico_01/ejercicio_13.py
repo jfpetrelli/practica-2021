@@ -8,7 +8,6 @@ función dentro de otra y permite comportamiento que sería imposible lograr de
 otra manera.
 """
 
-
 from typing import Iterator, Callable
 
 
@@ -21,13 +20,15 @@ def generar_pares_clousure(initial: int = 0) -> Callable[[], int]:
         - Usar closures
         - Usar el modificador nonlocal
     """
+
     def siguiente_par():
         nonlocal initial
         if initial % 2 == 0:
             initial += 2
-            return initial - 2      #pide en el primer retorno un 0 y no el siguiente numero para a 0
+            return initial - 2  # pide en el primer retorno un 0 y no el siguiente numero para a 0
         initial += 1
-        return initial - 2          #genera un comportamiento extraño, primera salida numero anterior al dado
+        return initial - 2  # genera un comportamiento extraño, primera salida numero anterior al dado
+
     return siguiente_par
 
 
@@ -57,11 +58,14 @@ def generar_pares_generator(initial: int = 0) -> Iterator[int]:
         yield initial
         initial += 2
 
+
 # NO MODIFICAR - INICIO
 generador_pares = generar_pares_generator()
 assert next(generador_pares) == 0
 assert next(generador_pares) == 2
 assert next(generador_pares) == 4
+
+
 # NO MODIFICAR - FIN
 
 
@@ -70,6 +74,7 @@ assert next(generador_pares) == 4
 
 def generar_pares_generator_send(initial: int = 0) -> Iterator[int]:
     """CHALLENGE OPCIONAL: Re-Escribir utilizando send para saltear numeros"""
+
 
 """
 
@@ -84,9 +89,6 @@ def generar_pares_generator_send(initial: int = 0) -> Iterator[int]:
         initial +=2   
 """
 
-
-
-
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":
     generador_pares = generar_pares_generator_send()
@@ -97,6 +99,8 @@ if __name__ == "__main__":
     assert next(generador_pares) == 12
     assert next(generador_pares) == 14
     assert next(generador_pares) == 16
+
+
 # NO MODIFICAR - FIN
 
 
@@ -105,7 +109,7 @@ if __name__ == "__main__":
 
 def generar_pares_delegados(initial: int = 0) -> Iterator[int]:
     """CHALLENGE OPCIONAL: Re-Escribir utilizando Generadores delegados (yield from)"""
-    pass # Completar
+    pass  # Completar
 
 
 # NO MODIFICAR - INICIO

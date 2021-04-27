@@ -38,7 +38,7 @@ def multiplicar_reduce(numeros: Iterable[float]) -> float:
     """
     if len(numeros) == 0:
         return 0
-    return reduce(lambda x, y: x*y, numeros)
+    return reduce(lambda x, y: x * y, numeros)
 
 
 # NO MODIFICAR - INICIO
