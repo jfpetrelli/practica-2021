@@ -72,6 +72,7 @@ def generar_pares_generator_send(initial: int = 0) -> Iterator[int]:
     """CHALLENGE OPCIONAL: Re-Escribir utilizando send para saltear numeros"""
 
 """
+
     while True:
         initial = yield        primera parte
         initial += 2

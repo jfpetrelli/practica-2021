@@ -39,7 +39,7 @@ def es_vocal_if_in(letra: str) -> bool:
         return True
     return False
     """
-    if letra.lower() in ('a', 'e', 'i', 'o', 'u'):
+    if letra.lower() in ('a', 'e', 'i', 'o', 'u'): #modificar tupla por string "aeiou"
         return True
     return False
 

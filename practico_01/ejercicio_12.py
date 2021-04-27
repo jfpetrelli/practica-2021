@@ -21,7 +21,7 @@ def combinar_basico(nombres: List[str], precios: List[float]) -> Tuple[Any]:
     """
 
     combinacion = []
-    for i in range(0, len(nombres)):
+    for i in range(len(nombres)):
         combinacion.append((nombres[i], precios[i]))
     return tuple(combinacion)
 

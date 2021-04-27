@@ -9,7 +9,7 @@ def es_palindromo(palabra: str) -> bool:
     Referencia: https://docs.python.org/3/tutorial/introduction.html#lists
     """
     if len(palabra) < 2:
-        return True
+        return "Ingreso incompatible"
     if palabra[0] == palabra[-1]:
         if es_palindromo(palabra[1:-1]):
             return True

@@ -50,7 +50,7 @@ def numeros_al_final_sorted(lista: List[Union[float, str]]) -> List[Union[float,
     Referencia: https://docs.python.org/3/library/functions.html#sorted
     """
 
-    return sorted(lista, key=lambda x: type(x) == int)
+    return sorted(lista, key=lambda x: type(x) != str)
 
 # NO MODIFICAR - INICIO
 assert numeros_al_final_sorted([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]
@@ -64,8 +64,8 @@ def numeros_al_final_filter(lista: List[Union[float, str]]) -> List[Union[float,
     """CHALLENGE OPCIONAL - Re-escribir utilizando la función filter.
     Referencia: https://docs.python.org/3/library/functions.html#filter
     """
-    return list(filter(lambda x: type(x) == str, lista)) + list(filter(lambda x: type(x) == int, lista))
-
+    return list(filter(lambda x: type(x) == str, lista)) + list(filter(lambda x: type(x) != str, lista))
+    #no hacer todo en 1 linea y 2da parte list(filter(lambda x: x not in LAPRIMERALISTA, lista))
 
 
 # NO MODIFICAR - INICIO
