@@ -36,8 +36,8 @@ def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[f
     """
     # elem hace referencia a cada elemento
     return [elem for elem in  # La lista ordenada se genera de los elementos:
-            [elem for elem in lista if type(elem) == str] +  # string en lista original /  unidos a
-            [elem for elem in lista if type(elem) == int]]  # 'enteros en lista original'
+            [elem for elem in lista if type(elem) == str]   # string en lista original /  unidos a
+            + [elem for elem in lista if type(elem) == int]]  # 'enteros en lista original'
 
 
 # NO MODIFICAR - INICIO

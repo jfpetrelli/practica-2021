@@ -74,13 +74,11 @@ numeros = [1, 2, 3, 4, 5, 6]
 
 # Escribir una función lambda que eleve los elementos al cubo
 
-numeros_al_cubo = lambda lista: [pow(x, 3) for x in lista]
-numeros_al_cubo = numeros_al_cubo(numeros)
+numeros_al_cubo = list(map(lambda x: pow(x, 3), numeros))
 
 # Escribir una función lambda que permita filtrar todos los elementos pares
 
 numeros_al_cubo_pares = lambda lista: [pow(x, 3) for x in lista if x % 2 == 0]
-numeros_al_cubo_pares = numeros_al_cubo_pares(numeros)
 
 # Escribir una función Lambda que sume todos los elementos
 
