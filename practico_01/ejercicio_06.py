@@ -35,8 +35,7 @@ def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[f
     return aux_str + aux_int
     """
     # elem hace referencia a cada elemento
-    return [elem for elem in [elem for elem in lista if type(elem) == str]
-            + [elem for elem in lista if type(elem) == int]]
+    return [e for e in [elem for elem in lista if type(elem) == str] + [elem for elem in lista if type(elem) == int]]
 
 
 # NO MODIFICAR - INICIO
