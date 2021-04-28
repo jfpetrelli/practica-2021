@@ -189,11 +189,10 @@ sucesivas.
 @medir_tiempo
 @memoized
 def calcular_posibilidades_recursiva(lista: Sequence[int], limite: int) -> int:
-    """Re-Escribir de manera recursiva"""
-
-    """ a fin de poder ejecutar el total de los test ya que estan incluidos llamados a la 
-        funcion recursiva antes de ejecutar todos los test de las  funciones "obligatorias" se 
-        copio el codigo de calcular_posibilidades. 
+    """Re-Escribir de manera recursiva
+A fin de poder ejecutar el total de los test ya que estan incluidos llamados a la
+funcion recursiva antes de ejecutar todos los test de las  funciones "obligatorias" se
+copio el codigo de calcular_posibilidades.
     """
     count = 0
     for i in range(limite):
