@@ -13,9 +13,9 @@ class Articulo:
     _last_id = 0
 
     @classmethod
-    def incrementar_id(self) -> int:
-        self._last_id += 1
-        return self._last_id
+    def incrementar_id(cls) -> int:
+        cls._last_id += 1
+        return cls._last_id
 
     def __init__(self, nombre: str = "tv"):
         self.id_ = self.incrementar_id()
