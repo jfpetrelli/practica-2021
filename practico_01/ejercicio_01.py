@@ -14,8 +14,6 @@ def maximo_basico(a: float, b: float) -> float:
 # NO MODIFICAR - INICIO
 assert maximo_basico(10, 5) == 10
 assert maximo_basico(9, 18) == 18
-
-
 # NO MODIFICAR - FIN
 
 
@@ -32,8 +30,6 @@ def maximo_libreria(a: float, b: float) -> float:
 # NO MODIFICAR - INICIO
 assert maximo_libreria(10, 5) == 10
 assert maximo_libreria(9, 18) == 18
-
-
 # NO MODIFICAR - FIN
 
 

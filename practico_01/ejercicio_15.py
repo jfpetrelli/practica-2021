@@ -65,8 +65,6 @@ def medir_tiempo(func: Callable[[], int]) -> Tuple[int, float]:
 result, elapsed = medir_tiempo(partial(calcular_posibilidades, lista, limite))
 print(f"Tiempo: {elapsed:2.2f} segundos - Usando Partial")
 assert result == 28671512
-
-
 # NO MODIFICAR - FIN
 
 
@@ -194,12 +192,7 @@ A fin de poder ejecutar el total de los test ya que estan incluidos llamados a l
 funcion recursiva antes de ejecutar todos los test de las  funciones "obligatorias" se
 copio el codigo de calcular_posibilidades.
     """
-    count = 0
-    for i in range(limite):
-        for _ in permutations(lista, i):
-            count += 1
-    return count
-    ###
+    pass # Completar
 
 
 # NO MODIFICAR - INICIO

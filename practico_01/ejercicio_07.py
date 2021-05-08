@@ -8,10 +8,8 @@ def es_palindromo(palabra: str) -> bool:
     Restricción: No utilizar bucles - Usar Slices de listas.
     Referencia: https://docs.python.org/3/tutorial/introduction.html#lists
     """
-    if len(palabra) < 2:
-        return "Ingreso incompatible"
-    if palabra[0] == palabra[-1]:
-        if es_palindromo(palabra[1:-1]):
+    
+    if palabra == palabra[::-1]:
             return True
     return False
 
@@ -20,8 +18,6 @@ def es_palindromo(palabra: str) -> bool:
 assert not es_palindromo("amor")
 assert es_palindromo("radar")
 assert es_palindromo("")
-
-
 # NO MODIFICAR - FIN
 
 

@@ -17,10 +17,7 @@ $PATH$/practico_02> python -m ejercicio_01
 Referencia: https://docs.python.org/3/reference/import.html#the-import-system
 """
 
-import main
-from source import util
-from source.controller import controller
-
+# Completar
 
 # NO MODIFICAR - INICIO
 assert main.name == "main"

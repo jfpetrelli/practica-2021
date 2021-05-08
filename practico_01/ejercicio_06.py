@@ -40,8 +40,6 @@ def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[f
 
 # NO MODIFICAR - INICIO
 assert numeros_al_final_comprension([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]
-
-
 # NO MODIFICAR - FIN
 
 
@@ -58,8 +56,6 @@ def numeros_al_final_sorted(lista: List[Union[float, str]]) -> List[Union[float,
 
 # NO MODIFICAR - INICIO
 assert numeros_al_final_sorted([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]
-
-
 # NO MODIFICAR - FIN
 
 
@@ -70,15 +66,17 @@ def numeros_al_final_filter(lista: List[Union[float, str]]) -> List[Union[float,
     """CHALLENGE OPCIONAL - Re-escribir utilizando la función filter.
     Referencia: https://docs.python.org/3/library/functions.html#filter
     """
-    return list(filter(lambda x: type(x) == str, lista)) + list(filter(lambda x: type(x) != str, lista))
+    l1 = list(filter(lambda x: type(x) == str, lista))
+
+    l2 = list(filter(lambda x: x not in l1, lista))
+
+    return l1 + l2
     # no hacer todo en 1 linea y 2da parte list(filter(lambda x: x not in LAPRIMERALISTA, lista))
 
 
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":
     assert numeros_al_final_filter([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]
-
-
 # NO MODIFICAR - FIN
 
 
@@ -87,7 +85,7 @@ if __name__ == "__main__":
 
 def numeros_al_final_recursivo(lista: List[Union[float, str]]) -> List[Union[float, str]]:
     """CHALLENGE OPCIONAL - Re-escribir de forma recursiva."""
-
+    pass # Completar
 
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":
