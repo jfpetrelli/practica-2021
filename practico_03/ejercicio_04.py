@@ -24,6 +24,7 @@ class Perro(Animal):
     def descripcion(self) -> str:
         return "Soy un perro y " + (super().descripcion()).lower()
 
+
 # NO MODIFICAR - INICIO
 terrier = Perro(edad=8, raza="Yorkshire Terrier")
 cachorro = Perro(edad=1)
