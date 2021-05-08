@@ -28,6 +28,7 @@ class Article:
     def __hash__(self) -> int:
         return hash(self.name)
 
+
 # NO MODIFICAR - INICIO
 class ShoppingCart:
     """Agregar los métodos que sean necesarios para que los test funcionen.

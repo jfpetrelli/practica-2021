@@ -18,6 +18,7 @@ class Rectangulo:
         else:
             return 0
 
+
 # NO MODIFICAR - INICIO
 
 # Test Constructor

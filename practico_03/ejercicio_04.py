@@ -48,6 +48,7 @@ class Animal:
     def descripcion(self) -> str:
         return f"Tengo {self.edad} años"
 
+
 @dataclass
 class Perro(Animal):
     edad: int = 0
@@ -55,6 +56,7 @@ class Perro(Animal):
 
     def descripcion(self) -> str:
         return "Soy un perro y " + (super().descripcion()).lower()
+
 
 # NO MODIFICAR - INICIO
 terrier = Perro(edad=8, raza="Yorkshire Terrier")
