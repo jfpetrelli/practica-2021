@@ -7,6 +7,7 @@ def numeros_al_final_basico(lista: List[Union[float, str]]) -> List[Union[float,
     """Toma una lista de enteros y strings y devuelve una lista con todos los
     elementos numéricos al final.
     """
+
     aux_str = []
     aux_int = []
     for elem in lista:
@@ -85,7 +86,7 @@ if __name__ == "__main__":
 
 def numeros_al_final_recursivo(lista: List[Union[float, str]]) -> List[Union[float, str]]:
     """CHALLENGE OPCIONAL - Re-escribir de forma recursiva."""
-    pass # Completar
+    pass  # Completar
 
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":
