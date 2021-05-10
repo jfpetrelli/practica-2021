@@ -85,7 +85,7 @@ suma_numeros_al_cubo_pares = reduce(lambda x, y: x + y, numeros_al_cubo_pares)
 # Escribir una función Lambda que permita ordenar los elementos de la numeros
 # en base a si son pares o impares
 
-numeros_ordenada = sorted(numeros, key = lambda x: x % 2 == 0)
+numeros_ordenada = sorted(numeros, key=lambda x: x % 2 == 0)
 
 # NO MODIFICAR - INICIO
 assert numeros_al_cubo == [1, 8, 27, 64, 125, 216]

@@ -27,11 +27,7 @@ def tiene_pares_for_else(numeros: Iterable[int]) -> bool:
     Referencia: https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops
     """
     for num in numeros:
-<<<<<<< HEAD
         if num % 2 == 0:
-=======
-        if num % 2 == 0:  
->>>>>>> practico-01
             break
     else:
         return False

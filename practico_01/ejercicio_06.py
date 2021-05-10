@@ -28,19 +28,10 @@ assert numeros_al_final_basico([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 
 
 def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[float, str]]:
     """Re-escribir utilizando comprensión de listas."""
-<<<<<<< HEAD
 
     aux_str = [elem for elem in lista if type(elem) == str]
     aux_int = [elem for elem in lista if type(elem) == int]
     return aux_str + aux_int
-=======
-    
-    aux_str = [elem for elem in lista if type(elem) == str]
-    aux_int = [elem for elem in lista if type(elem) == int]
-    return aux_str + aux_int
-    
-
->>>>>>> practico-01
 
 
 # NO MODIFICAR - INICIO
@@ -56,7 +47,7 @@ def numeros_al_final_sorted(lista: List[Union[float, str]]) -> List[Union[float,
     Referencia: https://docs.python.org/3/library/functions.html#sorted
     """
 
-    return sorted(lista, key = lambda x: type(x) != str)
+    return sorted(lista, key=lambda x: type(x) != str)
 
 
 # NO MODIFICAR - INICIO
