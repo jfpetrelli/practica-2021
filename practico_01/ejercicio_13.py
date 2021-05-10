@@ -72,7 +72,7 @@ assert next(generador_pares) == 4
 
 def generar_pares_generator_send(initial: int = 0) -> Iterator[int]:
     """CHALLENGE OPCIONAL: Re-Escribir utilizando send para saltear numeros"""
-    pass  # Completar
+    pass # Completar
 
 
 # NO MODIFICAR - INICIO
@@ -93,7 +93,7 @@ if __name__ == "__main__":
 
 def generar_pares_delegados(initial: int = 0) -> Iterator[int]:
     """CHALLENGE OPCIONAL: Re-Escribir utilizando Generadores delegados (yield from)"""
-    pass  # Completar
+    pass # Completar
 
 
 # NO MODIFICAR - INICIO

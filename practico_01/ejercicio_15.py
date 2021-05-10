@@ -192,7 +192,7 @@ A fin de poder ejecutar el total de los test ya que estan incluidos llamados a l
 funcion recursiva antes de ejecutar todos los test de las  funciones "obligatorias" se
 copio el codigo de calcular_posibilidades.
     """
-    pass  # Completar
+    pass # Completar
 
 
 # NO MODIFICAR - INICIO
