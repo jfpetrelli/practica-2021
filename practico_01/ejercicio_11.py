@@ -22,8 +22,6 @@ def suma_cubo_pares_for(numeros: Iterable[int]) -> int:
 
 # NO MODIFICAR - INICIO
 assert suma_cubo_pares_for([1, 2, 3, 4, 5, 6]) == 288
-
-
 # NO MODIFICAR - FIN
 
 
@@ -42,8 +40,6 @@ def suma_cubo_pares_sum_list(numeros: Iterable[int]) -> int:
 
 # NO MODIFICAR - INICIO
 assert suma_cubo_pares_sum_list([1, 2, 3, 4, 5, 6]) == 288
-
-
 # NO MODIFICAR - FIN
 
 
@@ -55,7 +51,7 @@ def suma_cubo_pares_sum_gen(numeros: Iterable[int]) -> int:
     y la función sum.
     Referencia: https://docs.python.org/3/reference/expressions.html#generator-expressions
     """
-    return sum((pow(x, 3) for x in numeros if x % 2 == 0))  # entendi que un numero impar al cubo es impar
+    return sum(pow(x, 3) for x in numeros if x % 2 == 0)  # entendi que un numero impar al cubo es impar
 
 
 # NO MODIFICAR - INICIO
@@ -89,7 +85,7 @@ suma_numeros_al_cubo_pares = reduce(lambda x, y: x + y, numeros_al_cubo_pares)
 # Escribir una función Lambda que permita ordenar los elementos de la numeros
 # en base a si son pares o impares
 
-numeros_ordenada = list(filter(lambda x: x % 2 == 1, numeros)) + list(filter(lambda x: x % 2 == 0, numeros))
+numeros_ordenada = sorted(numeros, key = lambda x: x % 2 == 0)
 
 # NO MODIFICAR - INICIO
 assert numeros_al_cubo == [1, 8, 27, 64, 125, 216]

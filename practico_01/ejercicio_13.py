@@ -64,8 +64,6 @@ generador_pares = generar_pares_generator()
 assert next(generador_pares) == 0
 assert next(generador_pares) == 2
 assert next(generador_pares) == 4
-
-
 # NO MODIFICAR - FIN
 
 
@@ -74,6 +72,7 @@ assert next(generador_pares) == 4
 
 def generar_pares_generator_send(initial: int = 0) -> Iterator[int]:
     """CHALLENGE OPCIONAL: Re-Escribir utilizando send para saltear numeros"""
+    pass  # Completar
 
 
 # NO MODIFICAR - INICIO
@@ -86,8 +85,6 @@ if __name__ == "__main__":
     assert next(generador_pares) == 12
     assert next(generador_pares) == 14
     assert next(generador_pares) == 16
-
-
 # NO MODIFICAR - FIN
 
 
