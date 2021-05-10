@@ -20,14 +20,15 @@ def generar_pares_clousure(initial: int = 0) -> Callable[[], int]:
         - Usar closures
         - Usar el modificador nonlocal
     """
+    aux = initial
 
     def siguiente_par():
-        nonlocal initial
-        if initial % 2 == 0:
-            initial += 2
-            return initial - 2  # pide en el primer retorno un 0 y no el siguiente numero para a 0
-        initial += 1
-        return initial - 2  # genera un comportamiento extraño, primera salida numero anterior al dado
+        nonlocal aux
+        if aux % 2 == 0:
+            aux += 2
+            return aux - 2  # pide en el primer retorno un 0 y no el siguiente numero para a 0
+        aux += 1
+        return aux - 2  # genera un comportamiento extraño, primera salida numero anterior al dado
 
     return siguiente_par
 
@@ -55,7 +56,11 @@ def generar_pares_generator(initial: int = 0) -> Iterator[int]:
     """
 
     while True:
-        yield initial
+        if initial % 2 == 0:
+            yield initial
+        else:
+            initial += 1
+            yield initial
         initial += 2
 
 
