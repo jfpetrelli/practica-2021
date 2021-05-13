@@ -48,9 +48,9 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
     """
     combinacion = []
     for index, value in enumerate(zip(nombres, precios, ids)):
-        combinacion.append(value)  
+        combinacion.append(value)
     return (tuple(combinacion))
-    
+
 
 
 # NO MODIFICAR - INICIO
