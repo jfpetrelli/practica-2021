@@ -47,12 +47,10 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
     Referencia: https://docs.python.org/3/library/functions.html#enumerate
     """
     combinacion = []
-    for indicen, nombre in enumerate(nombres):
-        for indicep, precio in enumerate(precios):
-            for indicei, id in enumerate(ids):
-                if indicen == indicep and indicen == indicei:
-                    combinacion.append((nombre, precio, id))
-    return tuple(combinacion)
+    for index, value in enumerate(zip(nombres, precios, ids)):
+        combinacion.append(value)  
+    return (tuple(combinacion))
+    
 
 
 # NO MODIFICAR - INICIO
