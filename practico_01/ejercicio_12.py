@@ -52,7 +52,6 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
     return (tuple(combinacion))
 
 
-
 # NO MODIFICAR - INICIO
 respuesta = (
     ("ventana", 100.48, 6852),
