@@ -12,7 +12,6 @@ $PATH$/practico_02> python -m source.ejercicio_02
 
 # Completar
 
-
 # NO MODIFICAR - INICIO
 assert main.name == "main"
 assert util.name == "util"
