@@ -13,12 +13,19 @@ def crear_tabla():
     con = sqlite3.connect("bd1.db")
     cursorObj = con.cursor()
     
-    cursorObj.execute("""CREATE TABLE Persona (
-	                    IdPersona INTEGER PRIMARY KEY autoincrement
-	                    ,descripcion TEXT
-	                    ,precio REAL
+    try:
+        cursorObj.execute("""CREATE TABLE Persona (
+	                    IdPersona integer primary key autoincrement
+                        ,Nombre text
+                        ,FechaNacimiento text
+	                    ,DNI integer
+	                    ,Altura integer
 	                    )""")
+        print("Se creó la tabla Personas")
+    except sqlite3.OperationalError:
+        print("La tabla Personas ya existe")
     con.commit()
+    con.close()
 
 
 def borrar_tabla():
@@ -28,6 +35,7 @@ def borrar_tabla():
     cursorObj = con.cursor()
     cursorObj.execute('drop table if exists Persona')
     con.commit()
+    con.close()
 
 
 # NO MODIFICAR - INICIO
