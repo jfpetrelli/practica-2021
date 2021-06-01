@@ -14,13 +14,13 @@ def buscar_persona(id_persona):
 
     con = sqlite3.connect("bd1.db")
     cursorObj = con.cursor()
-    row = cursorObj.execute("SELECT IDPersona, Nombre, FechaNacimiento, DNI, Altura FROM Persona WHERE IdPersona = ?",(id_persona,))    
-    if row.fetchone() == None:
-        return False
-    fila = list(row.fetchone())
-    date_fn = datetime.datetime.strptime(fila[2], "%d %B, %Y")
-    fila[2] = date_fn
-    return tuple(fila)
+    row = cursorObj.execute("SELECT IDPersona, Nombre, FechaNacimiento, DNI, Altura FROM Persona WHERE IdPersona = ?",(id_persona,))
+    fila = row.fetchone()
+    if fila == None : return False
+    f = list(fila)
+    date_fn = datetime.datetime.strptime(f[2], "%d %B, %Y")
+    f[2] = date_fn
+    return tuple(f)
 
 
 # NO MODIFICAR - INICIO
@@ -33,3 +33,5 @@ def pruebas():
 if __name__ == '__main__':
     pruebas()
 # NO MODIFICAR - FIN
+
+
